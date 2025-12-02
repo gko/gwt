@@ -7,7 +7,7 @@ You can read more about `git worktree` here: https://dev.to/konstantin/checking-
 ## Features
 
 * **Interactive Navigation**: Quickly jump between worktrees using an fzf-powered menu. 
-* **Quick Add**: Create a new worktree from an existing branch and switch to it in one command. 
+* **Quick Add**: Create a new worktree from an existing branch and switch to it in one command. If the branch doesn't exist, it will offer to create it.
 * **Easy Removal**: Interactively select and remove worktrees. 
 * **Direct Access**: Jump directly to a worktree for a specific branch. 
 * **Main Branch Shortcut**: Instantly navigate to the worktree of your repository's default branch (main or master). 

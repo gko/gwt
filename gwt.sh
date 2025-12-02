@@ -97,9 +97,24 @@ gwt() {
         echo "Error: A directory already exists at '$new_worktree_path'." >&2; return 1
       fi
 
-      echo "Creating worktree for branch '$branch_to_add' at '$new_worktree_path'..."
-      if git worktree add "$new_worktree_path" "$branch_to_add"; then
-        cd "$new_worktree_path"
+      if git rev-parse --verify "$branch_to_add" >/dev/null 2>&1 || \
+         git rev-parse --verify "origin/$branch_to_add" >/dev/null 2>&1; then
+        echo "Creating worktree for branch '$branch_to_add' at '$new_worktree_path'..."
+        if git worktree add "$new_worktree_path" "$branch_to_add"; then
+          cd "$new_worktree_path"
+        fi
+      else
+        printf "Branch '%s' does not exist. Create it? [y/N] " "$branch_to_add"
+        read -r REPLY
+        if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+          echo "Creating new branch '$branch_to_add' and worktree at '$new_worktree_path'..."
+          if git worktree add -b "$branch_to_add" "$new_worktree_path"; then
+            cd "$new_worktree_path"
+          fi
+        else
+          echo "Cancelled."
+          return 1
+        fi
       fi
       ;;
 
