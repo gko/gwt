@@ -15,7 +15,7 @@ You can read more about `git worktree` here: https://dev.to/konstantin/checking-
 
 ## Installation
 
-You will need to install [fzf](https://github.com/junegunn/fzf) (see this [installation instructions](https://github.com/junegunn/fzf?tab=readme-ov-file#installation)) for the interactive features.
+You will need to install [fzf](https://github.com/junegunn/fzf) (see these [installation instructions](https://github.com/junegunn/fzf?tab=readme-ov-file#installation)) for the interactive features.
 
 ### With [zinit](https://github.com/zdharma-continuum/zinit)
 
