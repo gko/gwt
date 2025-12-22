@@ -1,5 +1,9 @@
 # gwt — A Git Worktree Manager
 
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/c436a2a4-c108-4b62-a84c-66b1545db931"></video>
+</div>
+
 `gwt` is a simple command-line tool to help you manage your Git worktrees with ease. It simplifies the process of creating, navigating, and removing worktrees.
 
 You can read more about `git worktree` here: https://dev.to/konstantin/checking-out-multiple-branches-at-the-same-time-in-git-and-moving-files-between-them-31hk
